@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy New Year Wish</title>
+<style>
+  /* Body and background */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4430aa?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    overflow-x: hidden;
+  }
+
+  /* Main message box */
+  .message-box {
+    max-width: 90%;
+    margin: 50px auto 20px auto;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  /* Heart container */
+  .heart-box {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin: 30px auto;
+    cursor: pointer;
+  }
+
+  .heart {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    background: hotpink;
+    transform: rotate(-45deg);
+    border-radius: 20px 20px 0 0;
+    animation: glow 1.5s infinite alternate;
+  }
+
+  .heart:before,
+  .heart:after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: hotpink;
+    border-radius: 50%;
+  }
+
+  .heart:before {
+    top: -80px;
+    left: 0;
+  }
+
+  .heart:after {
+    left: 80px;
+    top: 0;
+  }
+
+  @keyframes glow {
+    0% { box-shadow: 0 0 10px hotpink; }
+    100% { box-shadow: 0 0 30px #ff69b4; }
+  }
+
+  .heart-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.2;
+    color: white;
+  }
+
+  /* Next slide text */
+  .next-slide {
+    display: none;
+    max-width: 90%;
+    margin: 20px auto;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  /* Click button */
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background: hotpink;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: #ff69b4;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="message-box">
+  <p>
+    Happy new year da thango🫂🤗😚💋...<br><br>
+    This yr will bring u all the gud things✨🤞 n nt just this yr I'll always be there fr u 🫂🩵...<br><br>
+    This New Year, I'm sending u nt just wishes, but my whole heart💓💖💞...<br>
+    all is well ❤️‍🩹 luv u 😘 n miss u🥺🥺🫂🫂<br><br>
+    If u're smiling rn just knw tht someone far away is loving u deeply and missing u so much....🫂🫂😘😚💋🥺<br><br>
+    You're always mine🩵✨🫶
+  </p>
+</div>
+
+<div class="heart-box" onclick="showNextSlide()">
+  <div class="heart">
+    <div class="heart-text">Hari ❤️ Priya</div>
+  </div>
+</div>
+
+<button onclick="showNextSlide()">Click Now 💖</button>
+
+<div class="next-slide" id="nextSlide">
+  No matter how far you are, you are always in my ❤️
+</div>
+
+<script>
+  function showNextSlide() {
+    document.getElementById('nextSlide').style.display = 'block';
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
